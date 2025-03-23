@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final-HomePage</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+      }
+
+      .displayedWork {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+        
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+      }
+
+      .table-1x5 {
+        margin-top: 50px;
+        width: 50vw;
+        max-width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 25%;
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+      }
+
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+      
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a href="index.html" class="nav-link"><- Back</a>
+      </div>
+      <div class="titleElement">
+        Personal Design Magazine
+      </div>
+
+      <div class="displayedWork">
+        <img src="public/MichaelGvozdekMagazineCoverupdate.jpg" alt="magazine cover" style="width: 50%">
+      </div>
+
+      <div class="displayedWork">
+        <img src="public/Spread One.jpg" alt="magazine cover" style="width: 50%">
+      </div>
+        
+      <div class="displayedWork">
+        <img src="public/Spread two.jpg" alt="magazine cover" style="width: 50%">
+      </div>     
+      
+      <div class="displayedWork">
+        <img src="public/Spread Three.jpg" alt="magazine cover" style="width: 50%">
+      </div>   
+        
+      <div class="paraElement" style="margin-top: 25px;">
+        <p>Progress Images:</p>
+      </div>
+
+      <table class="table-1x5">
+        <tr>
+          <td><img src="public/ProgressOne.png" class="progress-img" alt="Image 1"></td>
+          <td><img src="public/ProgressTwo.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="public/progressThree'.png" class="progress-img" alt="Image 3"></td>
+          <td><img src="public/ProgressFour.png" class="progress-img" alt="Image 4"></td>
+        </tr>
+      </table>
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+      </div>
+        
+<h2 class="sectionTitle"> What I Did</h2>
+      <div class="paraElement">
+        <p>For the final project of my GBDA 101 course, I created a short magazine showcasing my creative journey throughout the term. I had complete creative freedom with this project, so I decided to illustrate all of the graphics seen throughout the magazine. Everything seen on the magazines cover and spreads was made by me.
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">Design Decisions</h2>
+      <div class="paraElement">
+        <p>I wanted to go for a super vibrant and chaotic style for this magazine, and I achieved that in a number of ways. Creating a simple, yet still detailed background allowed me to make the subject of each page pop without having the background take away from the design. Illustrating the words themselves allowed me to carefully curate their aesthetics, which is part of what gives the cover page its recongizable style. I chose purple for the background of the cover because it contrasted each word the best while still being dark enough to not draw too much attention. <br><br>
+          Each spread after that tones it down in the chaoticness, while still having an illustrated title that matches the theme. Keeping the body text as a regular font was crucial to keep the magazine readable, as well as for my sanity. I chose to bold important words throughout the entire magazine, I found that this was great for readability and it made the large paragraphs much less straining to see.
+          
+          <br><br>
+           Made in <b>Photoshop</b>, <b>Indesign</b>, and <b>Illustrator</b>.
+          
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">What I Learned</h2>
+      <div class="paraElement">
+        <p>This was my first time making a magazine, and while i'm proud of how it turned out there are still many things I would change. Making the cover and spread titles was great practice for illustration, but looking back I could have embraced that style even more for each page. The spread pages have a pretty large contrast between them and the cover in terms of style, and that can be a little jarring. There are also a few spacing errors I would fix, as well as some errors in the layout of the text columns.
+        </p>
+      </div>          
+        
+  <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2025</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+          <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Gvozdek's Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css"> 
+    <style>
+           html,
+      body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        scroll-behavior: auto;
+      }
+
+      .silhouetteContainer {
+        width: 100vh;
+        display: flex;
+        position: relative;
+        left: 4.9vw;
+        animation-name: logos;
+        animation-duration: 2s;
+      }
+
+      #silhouetteContainer {
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes logos {
+        0% {
+          left: -500px;
+          transform: rotate(-5deg);
+        }
+
+        100% {
+          left: 100PX;
+          transform: rotate(0deg);
+        }
+      }
+
+      #overlay-text {
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes title {
+        0% {
+          top: -500px;
+          transform: rotate(-5deg);
+        }
+
+        100% {
+          top: 35vh;
+          right: 10vw;
+          transform: rotate(0deg);
+        }
+      }
+
+      .silhouette1,
+      .silhouette2,
+      .silhouette3,
+      .silhouette4,
+      .silhouette5 {
+        width: 100%;
+        position: absolute;
+        transition: left 1s;
+      }
+
+      .silhouette1 {
+        z-index: 5;
+        left: -500px;
+      }
+
+      .silhouette1:hover {
+        left: -600px;
+      }
+
+      .silhouette2 {
+        z-index: 4;
+        left: -400px;
+        top: 15px;
+      }
+
+      .silhouette2:hover {
+        left: -500PX;
+      }
+
+      .silhouette3 {
+        z-index: 3;
+        left: -300px;
+        top: 30px;
+
+      }
+
+      .silhouette3:hover {
+        left: -400px;
+      }
+
+      .silhouette4 {
+        z-index: 2;
+        left: -200px;
+        top: 45px;
+
+      }
+
+      .silhouette4:hover {
+        left: -300px;
+      }
+
+      .silhouette5 {
+        z-index: 1;
+        left: -100px;
+        top: 60px;
+      }
+
+      .silhouette5:hover {
+        left: -200px;
+      }
+
+      .contentContact {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        padding-left: 100px;
+        gap: 1.5vh;
+      }   
+      
+      .back {
+        background-color: #caccc9;
+        height: 100vh;
+        width: 820vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+      }
+      
+      
+      .sectionOne {
+        background-color: #caccc9;
+        /* Light gray */
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .sectionTwo {
+        width: 70vw;
+        min-width: 50vw;
+        background-color: #1e1f1e;
+        /* dark grey */
+      }
+
+      .sectionThree {
+        width: 150vw; 
+        background-color: #283121;
+        /* dark green */
+      }
+
+      .sectionFour {
+        width: 130vw;
+        background-color: #516543;
+        /* Green */
+      }
+      
+      .sectionFive {
+        width: 180vw;
+        background-color: #1e1f1e;
+      }
+      
+      .sectionSix {
+        width: 150vw;
+        background-color: #283121;
+      }
+      
+      .sectionContact {
+        width: 40vw;
+        background-color: #1e1f1e;
+      }
+
+
+
+
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+
+    <div class="nav-bar" id="navBar">
+      <a href="#" class="nav-link" data-target=".sectionTwo">About Me</a>
+      <a href="#" class="nav-link" data-target=".sectionThree">Projects</a>
+      <a href="#" class="nav-link" data-target=".sectionContact">Contact</a>
+    </div>
+    <div class="section sectionOne">
+        <div class="overlay-text">
+        <h1 class="name-Main">MICHAEL GVOZDEK</h1>
+        <h2 class="name-Sub">
+          Graphic Design - Digital Media
+        </h2>
+      </div>
+      <div class="silhouetteContainer">
+        <div class="silhouette1">
+          <img src="public/silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette2">
+          <img src="public/Silhouette-02.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette3">
+          <img src="public/Silhouette-03.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette4">
+          <img src="public/Silhouette-04.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette5">
+          <img src="public/Silhouette-05.png" alt="description of image" style="width: 100%">
+        </div>
+      </div>
+        
+
+    </div>
+
+    <div class="section sectionTwo">
+      <div class="content">
+        <h1 class="titleElement"> 
+          About Me
+        </h1>
+ 
+        <div class="paraElement">
+          <p><b style="font-size: 1.5em;">I’m Michael Gvozdek</b><br><br>
+
+            I turn the world around me into vibrant, creative projects. Currently, I'm studying Global Business and Digital Art at the University of Waterloo’s Stratford School of Interaction Design and Business. Digital design has always been my focus and I’ve picked up experience with <b>Photoshop</b>, <b>Illustrator</b>, <b>InDesign</b>, <b>After Effects</b>, and <b>Premiere Pro</b>. In combination with my design skills, I have experience with coding creative projects in Python, Java, Javascript, and HTML/CSS.
+            <br><br>
+            The culmination of my time in skateparks and cities has built the foundation of my creative style, with the vibrant, bold, and gritty nature of urban environments bleeding into my designs. The graffiti I see around me every day has inspired me to pick up <b>illustration</b> as a hobby, which is reflected in many of my projects. Time leading my high school yearbook team as well as directing my first documentary has given me excellent <b>project management</b> and <b>collaboration </b>skills. <br><br>
+            I'm actively pursuing opportunites in any kind of design related field, as well as user experience - my need to create is never satisfied.
+          </p>
+        </div>
+        <img class="logo" src="public/MichaelGvozdek - SilhouetteLogo.png" alt="Michaels Logo">
+      </div>
+    </div>
+
+    <div class="section sectionThree">
+      <div class="contentSecond">
+ 
+        <div class="workContainer">
+          <a href="jobuPoster.html">
+            <img class="workImage" src="public/Jobu Poster New - Low Res.jpg" alt="Jobu Poster"></a>
+
+          <div class="workdescrip">
+            <h1 class="workTitle">Jobu Poster</h1>
+            <div class="workPara"> <h3>Personal Project<br>2025<br><br></h3> 
+              A poster I created to express my personal style and practice illustration.
+            </div>
+          </div>
+        </div>
+
+        <div class="workContainer">
+          <a href="designMagazine.html">
+            <img src="public/Gvozdek_Michael_A1_Cover.jpg" alt="design Magazine" class="workImage">
+          </a>
+          <div class="workDescrip">
+            <h1 class="workTitle">Personal Design Magazine</h1>
+            <div class="workPara"> <h3>University Project<br>2024<br><br></h3>
+              A magazine showcasing my journey with digital design as well as my design philosophy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section sectionFour">
+      <div class="contentSecond">
+        <div class="workContainer">
+          <a href="boundByBoards.html">
+            <img class="workImage" src="public/Thumbnail-Square2.png" alt="Bound By Boards Thumbnail">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">Bound By Boards Documentary</h1>
+            <div class="workPara"><h3> University Project<br>2025<br><br></h3>
+              My first time directing was Bound By Boards, a documentary about the University of Waterloo's Skateboard Club.
+            </div>
+          </div>
+        </div>
+        
+        <div class="workContainer">
+          <a href="esportsDesigns.html">
+            <img class="workImage" src="public/Gaming Lounge Announcement W25 (5).png" alt="Esports Designs">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">Esports Designs</h1>
+            <div class="workPara"><h3>Part Time Work<br>2024 - 2025<br><br></h3>
+              A series of designs and social media posts I created during my time working for Uwaterloo Esports.
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="sectionFive">
+      <div class="contentSecond">
+        <div class="workContainer">
+          <a href="yearbookDesigns.html">
+            <img class="workImage" src="public/Michael Gvozdek - Yearbook Cover-LOWRES.png" alt="Yearbook Cover">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">Yearbook Designs</h1>
+            <div class="workPara"><h3>Extracurricular Work<br>2022 - 2023<br><br></h3>
+              In my grade 12 year of highschool, I created and led our yearbook design team. I made a cohesive theme as well as a series of matching designs for the book.
+            </div>
+          </div>
+        </div>
+        <div class="workContainer">
+          <a href="GBDAMagazine.html">
+            <img class="workImage" src="public/MichaelGvozdekMagazineCoverupdate.jpg" alt="Graffiti Magazine Cover">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">GBDA Magazine</h1>
+            <div class="workPara"><h3>University Work<br>2024<br><br></h3>
+              A magazine made in my first year of university, showcasing the projects I created throughout the term.
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="section sectionSix">
+      <div class="contentSecond">
+        <div class="workContainer">
+          <a href="meanGirlsMarketing.html">
+            <img class="workImage" src="public/MichaelGvozdek - Mean Girls Poster-Final-LOWRES.png" alt="Mean Girls Poster">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">Mean Girls Marketing</h1>
+            <div class="workPara"><h3>Extracurricular Project<br>2023<br><br></h3>
+              After making a Mean Girls poster for a highschool project, I pushed the project further and went on to create the full marketing for my schools Mean Girls Drama Production.
+            </div>
+          </div>
+        </div>
+        <div class="workContainer">
+          <a href="omnivexDesigns.html">
+            <img class="workImage" src="public/hospital donor wall - small.png" alt="Donor Wall">
+          </a>
+          <div class="workdescrip">
+            <h1 class="workTitle">Omnivex Designs</h1>
+            <div class="workPara"><h3>Co-op Work<br>2022<br><br></h3>
+              A series of designs I created during a co-op to showcase the uses of Omnivex's software in a healthcare setting.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sectionContact">
+      <div class="contentContact">
+        <h1 class="titleElement" style="line-height: 1.5; margin-top: 10vh;">
+          Contact Me
+        </h1>
+
+        <h2>Email</h2>
+        <a class="contact" href="mailto:michaelgvozdek@icloud.com">michaelgvozdek@icloud.com
+        </a>
+
+        <h2>LinkedIn</h2>
+        <a class="contact" href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">www.linkedin.com/in/michael-gvozdek
+        </a>
+
+        <h2>Youtube</h2>
+        <a class="contact" href="https://www.youtube.com/@jobuandme/videos">www.youtube.com/@jobuandme
+        </a>
+
+        <h2>Instagram</h2>
+        <a class="contact" href="https://www.instagram.com/jobuandme?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">www.instagram.com/jobuandme
+        </a>
+        <br>
+        <img class="logo" src="public/MichaelGvozdek - SilhouetteLogo.png" alt="Michaels Logo">
+      </div>
+    </div>
+
+    <script src="src/script.js">
+    </script>
+  </body>
+</html>

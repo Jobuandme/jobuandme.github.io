@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final-HomePage</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+      }
+
+      .displayedWork {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+        
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+      }
+
+      .table-1x5 {
+        margin-top: 50px;
+        width: 50vw;
+        max-width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 25%;
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+      
+      .table-1x6 {
+        margin-top: 50px;
+        width: 50vw;
+        max-width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x6 td {
+        width: 16%;
+      }
+
+      .table-1x6 img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a href="index.html" class="nav-link"><- Back</a>
+      </div>
+      <div class="titleElement" style="line-height: 1.5;">
+        Yearbook Designs
+      </div>
+
+      <table class="table-1x5">
+        <tr>
+          <td><img src="public/Michael Gvozdek - Yearbook Cover.jpg" class="progress-img" alt="Image 1"></td>
+          <td><img src="public/Yearbook endsheets.png" class="progress-img" alt="Image 2"></td>
+        </tr>
+      </table>  
+
+      <table class="table-1x6">
+        <tr>
+          <td><img src="public/fall title page.png" class="progress-img" alt="Image 1"></td>
+          <td><img src="public/fall right page full.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="public/Winter Title Page.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="public/Winter Right Page Full.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="public/Spring Title Page.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="public/Spring Right Page Full.png" class="progress-img" alt="Image 2"></td>
+        </tr>
+      </table>  
+
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+      </div>
+        
+<h2 class="sectionTitle">The Situation</h2>
+      <div class="paraElement">
+        <p>
+          In my grade 12 year of highschool I was told by my digital media teacher that the yearbook wasnt going to be happening for our year. Me and two friends took this personally as we weren't going to allow our graduating class be the only one without a yearbook.
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">The Task At Hand</h2>
+      <div class="paraElement">
+        <p>
+          As the Yearbook Liaison for Student Council, my first task was to start the yearbook committee up again or I would be out of a job. To start the committee I had to get in contact with our previous yearbook printing company as well as find a staff advisor to oversee our meetings. Once the committee was approved, me and my fellow execs had to recruit a team for the next 10 months.
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">The Action's I Took</h2>
+      <div class="paraElement">
+        <p>
+          For the next 10 months, I focused on the design and marketing of the yearbook, while the other 2 heads focused on photography and journalism. I oversaw a team of 10 designers, ensuring they met the strict deadlines for completed pages. While overseeing the design team, I recruited a head of design who I tasked with creating specialized graphics and assets for the book. Our team decided on organizing the book by season, with each season having its own sub-theme. I created a palette of 3-4 colours for each season to use, as well as design instructions for my team to follow for each page. The cover and endsheets for the book I had created earlier in the year, as a project in my grade 12 digital media class - this is what established our theme for the book. In my free time I created title page graphics as well as collages for each section of the book. While designing, I was frequently in contact with the printing company representative, as well as the 2 other heads of the committee.
+        </p>
+      </div>      
+      
+      <h2 class="sectionTitle">The Results</h2>
+      <div class="paraElement">
+        <p>
+          As a result of <b>10 months</b> of hard work, I was able to design and deliver a cohesive and unique yearbook to <b>500</b> students and faculty, on the dot. Pricing each book at $35, we were able to generate over <b>$17,500</b> of revenue. My design team was able to complete all <b>168</b> pages on time and with exceptional attention to detail and theme.
+        </p>
+      </div>     
+        
+      <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2025</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+          <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img, .table-1x6 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final-HomePage</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+
+      }
+
+      .displayedWork {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+
+      .video-container {
+        position: relative;
+        width: 60%;
+        padding-top: 33.75%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .a {
+        color: white;
+      }
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a href="index.html" class="nav-link"><- Back</a>
+      </div>
+      <div class="titleElement">
+        Bound By Boards
+      </div>
+
+      <div class="paraElement" style="margin-top: 50px;">
+        <p>
+          <i>"Your “Bound By Boards” documentary is the one I showed in class to spur critical discussion and to inspire. It is truly excellent. Not only does it nail many of the assignment’s technical and aesthetic asks, but it’s also full of heart and life. It’s a lovely, worthwhile piece of media."</i>
+          <br><br>
+          <b>- Jonathan Baltrusaitis</b>
+        </p>
+      </div>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/84KcwAFeiZg?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="paraElement" style="justify-content: left;">
+        <p>Find the link <a class="nav-link" href="https://www.youtube.com/watch?v=84KcwAFeiZg&t=204s"><b>HERE</b>.</a>
+        </p>
+      </div>
+
+      <h2 class="sectionTitle"> What I Did</h2>
+      <div class="paraElement">
+        <p>My final project in GBDA 201, a 2nd-year film course, was to create a documentary with 3 partners. As the director, I was responsible for finding a subject to film, organizing our shooting and recording, and screening the doc with my group. Alongside my directing, I operated one of the 3 cameras during filming and edited each cut of the documentary.
+        </p>
+      </div>
+
+      <h2 class="sectionTitle">Design Decisions</h2>
+      <div class="paraElement">
+        <p>
+          Before we had even confirmed that we were going to film with the skate club, I had a vision for the documentary in my mind. I wanted the feel of a classic skate video but with more personal elements and emotions from our interviewees that you dont normally see in skate edits. To achieve the classic skate feel I made the intro a skate edit. This gave the skate club a proper intro as well as displayed their talents and style. The song for the opening edit was intentionally chosen for its themes of fun as well as hardships, which perfectly captures the spirit of skateboarding.
+          <br><br>We used a camcorder as well as a fisheye lens to capture that classic skate video feel. The fisheye lens let us get visually interesting shots of the arena, as well as focus on the actions of each skater. The documentary takes several breaks for our interviews, which is where we established the personal aspect of the film. By prying into what skateboarding meant to the club execs and how its affected them, we were able to capture feelings that are unseen in other skateboard films. The cuts between skate clips and the interviews is intentional to keep the classic skate feel connected with the emotional aspect of the documentary.
+          <br><br>
+          Edited in <b>Premiere Pro</b> and <b>After Effects</b>.
+
+        </p>
+      </div>
+
+      <h2 class="sectionTitle">What I Learned</h2>
+      <div class="paraElement">
+        <p>I learned a multitude of things from my experience with the documentary. Firstly, the organization and leadership experience I got was extremely helpful. Having to reach out and cold call different groups of people to find someone to film gave me a boost in confidence and great experience for making connections. From the actual making of the documentary, I learned that having a vision for what you want to create is crucial before starting a project. By knowing how I wanted the doc to look before filming, I was able to direct my team in the right direction for camera shots and filming styles. 
+          <br><br>
+          What I could have improved on was planning filming locations. Filming in the arena worked out, but the interview locations were decided on after we got on location. This turned out good and bad, we had an excellent backdrop for some interviews with the "no skating" sign in the back. However, a different spot had a reflection of us in the background which pulled the focus away from the interviewee.
+        </p>
+      </div>
+
+      <div class="paraElement" style="margin-top: 50px; line-height: 35px;">
+        <p>
+          Directed by <b>Michael Gvozdek</b> <br>
+          Production Manager: <b>Giancarlo Haidar</b> <br>
+          Producers: <b>Michael Gvozdek, Giancarlo Haidar</b><br>
+          Director of Photography: <b>Charlie Cilla</b> <br>
+          Boom Operator: <b>Giancarlo Haidar</b><br>
+          Editing: <b>Michael Gvozdek</b> <br>
+          Research: <b>Haojia Sun</b><br> <br>
+
+          Special Thanks To:<br>
+          Timur Khayrollin<br>
+          Saira Hadi<br>
+          Manav Vellore<br>
+          Philip Stanoev<br> <br>
+
+          Shot in 1080p with:<br>
+          Canon EOS R7<br>
+          Canon XF100<br>
+          Canon EOS D60
+        </p>
+      </div>
+
+      <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2025</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+            <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+</html>
