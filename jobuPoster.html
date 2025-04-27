@@ -219,13 +219,12 @@
       .table-1x5 {
         margin-top: 5px;
         width: 60%;
-        max-width: 60vw;
         display: flex;
         justify-content: center;
       }
 
       .table-1x5 td {
-        width: 20%;
+        width: auto;
       }
 
       .table-1x5 img {
@@ -272,7 +271,47 @@
         margin-top: 50px;
         margin-bottom: 5px;
       }
-      
+      .workImage {
+        width: 50%;
+      }
+
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          text-align: left;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    
     </style>
   </head>
   <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
@@ -282,14 +321,14 @@
 
     <div class="content">
       <div class="backButton">
-        <a href="index.html" class="nav-link"><- Back</a>
+        <a id="backButton" class="nav-link"><- Back</a>
       </div>
       <div class="titleElement">
         Jobu Poster
       </div>
         
       <div class="displayedWork">
-        <img src="public/Jobu Poster New - Low Res.jpg" alt="magazine cover" style="width: 50%">
+        <img src="public/Jobu Poster New - Low Res.jpg" class="workImage" alt="magazine cover">
       </div>
 
       <div class="paraElement" style="margin-top: 25px;">
@@ -361,5 +400,17 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
+
+    const backButton = document.getElementById('backButton');
+
+    backButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Stop default link behavior
+
+    if (window.innerWidth <= 800) {
+      window.location.href = 'indexMobile.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+  });
   </script>
 </html>

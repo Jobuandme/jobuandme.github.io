@@ -255,8 +255,9 @@
 
       .video-container {
         position: relative;
-        width: 60%;
-        padding-top: 33.75%;
+        width: 50%;
+        height: auto;
+        padding-top: 30%;
         margin-top: 50px;
         margin-bottom: 50px;
       }
@@ -272,6 +273,53 @@
       .a {
         color: white;
       }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+        .video-container {
+          width: 85%;
+          padding-top: 48%;        
+        }
+      }
     </style>
   </head>
   <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
@@ -279,7 +327,7 @@
   <body class="back">
     <div class="content">
       <div class="backButton">
-        <a href="index.html" class="nav-link"><- Back</a>
+        <a id="backButton" class="nav-link"><- Back</a>
       </div>
       <div class="titleElement">
         Bound By Boards
@@ -380,5 +428,17 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
+
+    const backButton = document.getElementById('backButton');
+
+    backButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Stop default link behavior
+
+    if (window.innerWidth <= 800) {
+      window.location.href = 'indexMobile.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+    });
   </script>
 </html>

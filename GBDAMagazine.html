@@ -273,6 +273,49 @@
         margin-top: 50px;
         margin-bottom: 5px;
       }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+      }
       
     </style>
   </head>
@@ -281,44 +324,29 @@
   <body class="back">
     <div class="content">
       <div class="backButton">
-        <a href="index.html" class="nav-link"><- Back</a>
+        <a id="backButton" class="nav-link"><- Back</a>
       </div>
       <div class="titleElement">
         Personal Design Magazine
       </div>
 
       <div class="displayedWork">
-        <img src="public/MichaelGvozdekMagazineCoverupdate.jpg" alt="magazine cover" style="width: 50%">
+        <img src="public/MichaelGvozdekMagazineCoverupdate.jpg" alt="magazine cover" class="workImage">
       </div>
 
       <div class="displayedWork">
-        <img src="public/Spread One.jpg" alt="magazine cover" style="width: 50%">
+        <img src="public/Spread One.jpg" alt="magazine cover" class="workImage">
       </div>
         
       <div class="displayedWork">
-        <img src="public/Spread two.jpg" alt="magazine cover" style="width: 50%">
+        <img src="public/Spread two.jpg" alt="magazine cover" class="workImage">
       </div>     
       
       <div class="displayedWork">
-        <img src="public/Spread Three.jpg" alt="magazine cover" style="width: 50%">
+        <img src="public/Spread Three.jpg" alt="magazine cover" class="workImage">
       </div>   
         
-      <div class="paraElement" style="margin-top: 25px;">
-        <p>Progress Images:</p>
-      </div>
 
-      <table class="table-1x5">
-        <tr>
-          <td><img src="public/ProgressOne.png" class="progress-img" alt="Image 1"></td>
-          <td><img src="public/ProgressTwo.png" class="progress-img" alt="Image 2"></td>
-          <td><img src="public/progressThree'.png" class="progress-img" alt="Image 3"></td>
-          <td><img src="public/ProgressFour.png" class="progress-img" alt="Image 4"></td>
-        </tr>
-      </table>
-      <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modalImg">
-      </div>
         
 <h2 class="sectionTitle"> What I Did</h2>
       <div class="paraElement">
@@ -372,5 +400,16 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
+    const backButton = document.getElementById('backButton');
+
+      backButton.addEventListener('click', function(event) {
+      event.preventDefault(); // Stop default link behavior
+
+      if (window.innerWidth <= 800) {
+        window.location.href = 'indexMobile.html';
+      } else {
+        window.location.href = 'index.html';
+      }
+    });
   </script>
 </html>

@@ -1,0 +1,271 @@
+           
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        scroll-behavior: auto;
+      }
+
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-150px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100vh; 
+        animation: slideDown 1.2s ease-out forwards;
+        transition: transform 1s;
+      }
+
+      .overlay-text {
+        position: relative;
+        margin-top: 20vh;
+        margin-left: 10vw;
+      } 
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        color: #1e1f1e;
+        font-size: 12vw;
+        margin-bottom: 1vh;
+
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400; 
+        font-style: normal;
+        color: #516543;
+        font-size: 1.55em;
+        font-size: 8vw; 
+        line-height: 1.25em;
+        margin-bottom: 25vh;
+
+      }
+
+      .logo {
+        width: 70px;
+        height: 70px;
+        margin-left: 10vw;
+      }
+
+      .logo2 {
+        width: 70px;
+        height: 70px;
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1em;
+        text-align: left;
+        color: #a9a9a9;
+        line-height: 4vh;
+        max-width: 85%;
+        width: auto;
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 8vh;
+        line-height: 30px;
+        text-align: left;
+      }
+
+      .textContent {
+        display: flex;
+        flex-direction: column;
+        align-items: left; 
+        justify-content: flex-start;
+        margin-left: 10vw;
+        width: 100vw;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .workContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vh;
+        width: 100vw;
+        height: 100%;
+      }
+
+      .workContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background: rgba(0, 0, 0, 0.4);
+        width: 90vw;
+        justify-content: space-between;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        box-sizing: border-box;
+      }
+      
+      .workContainer a {
+        display: block;
+        max-width: 100%;
+      }
+      
+      .workImage img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .workContainer a img {
+        width: 100%; 
+        height: auto;
+        display: block;
+      }
+      
+      .workDescrip {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 5vw;
+      }
+
+      .workTitle {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2em;
+        width: 100%; 
+        color: #e8ebe7;
+        margin-top: 4vh;
+        text-align: left;
+      }
+
+      .workPara {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        text-align: left;
+        width: 100%;
+        color: #a9a9a9;
+        line-height: 30px;
+      }
+      
+    .nav-link {
+      color: #a9a9a9;
+      text-decoration: none;
+      font-size: 18px; 
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      color: #e8ebe7;
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      }
+      
+    .nav-bar {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      position: fixed;
+      bottom: 20px; /* Slightly above the bottom */
+      left: 50%;
+      transform: translate(-50%, 150%); /* Start even lower */
+      width: 32vw;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      transition: transform 0.3s ease-in-out;
+      gap: 100px;
+    }
+      
+      .contentContact {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        padding-left: 10vw;
+        gap: 2.8vh;
+      }      
+      
+    .contacts {
+      flex: 1;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+      
+      a.contact:link {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+      a.contact:visited {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #a9a9a9;
+      text-decoration: none;
+    }    
+     a.contact:hover {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #e8ebe7;
+        text-decoration: none;
+
+      } 
+      
+      h2 {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #e8ebe7;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #e8ebe7;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+      
+      .contactList {
+        display: flex;
+        flex-direction: column;
+        align-content: left;
+      }

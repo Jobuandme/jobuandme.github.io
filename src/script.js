@@ -3,6 +3,27 @@
       let targetScroll = 0;
       let easeFactor = 0.05;
 
+      function loadAppropriatePage() {
+        if (window.innerWidth < 800) {
+          if (!localStorage.getItem('redirectedToMobile')) {
+            localStorage.setItem('redirectedToMobile', 'true');
+            window.location.href = 'indexMobile.html';
+          }
+        } 
+        else {
+          if (localStorage.getItem('redirectedToMobile')) {
+            localStorage.removeItem('redirectedToMobile');
+            window.location.href = 'index.html';
+          }
+        }
+      }
+    
+      window.addEventListener('load', loadAppropriatePage);
+    
+      window.addEventListener('resize', function() {
+        loadAppropriatePage();
+      });
+      
       function smoothScroll() {
         targetScroll = Math.max(0, Math.min(targetScroll, scrollContainer.scrollWidth - scrollContainer.clientWidth));
         scrollPos += (targetScroll - scrollPos) * easeFactor;
@@ -44,4 +65,42 @@
             }
           }
         });
+      });
+
+      document.querySelectorAll('.workContainer a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const href = link.getAttribute('href');
+      
+          localStorage.setItem('scrollX', window.scrollX);
+          localStorage.setItem('scrollY', window.scrollY);
+          localStorage.setItem('scrollTime', Date.now()); // Save the timestamp too
+      
+          setTimeout(() => {
+            window.location.href = href;
+          }, 50);
+        });
+      });
+      
+      window.addEventListener('load', () => {
+        const scrollX = localStorage.getItem('scrollX');
+        const scrollY = localStorage.getItem('scrollY');
+        const scrollTime = localStorage.getItem('scrollTime');
+      
+        if (scrollX !== null && scrollY !== null && scrollTime !== null) {
+          const now = Date.now();
+          const maxAge = 5 * 60 * 1000; // 5 minutes in milliseconds
+      
+          if (now - scrollTime < maxAge) {
+            window.scrollTo({
+              top: parseFloat(scrollY),
+              left: parseFloat(scrollX),
+              behavior: 'smooth'
+            });
+          }
+      
+          localStorage.removeItem('scrollX');
+          localStorage.removeItem('scrollY');
+          localStorage.removeItem('scrollTime');
+        }
       });

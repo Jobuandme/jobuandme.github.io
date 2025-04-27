@@ -291,6 +291,49 @@
         margin-top: 50px;
         margin-bottom: 5px;
       }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x2 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x2 td {
+          width: auto;
+        }
+
+        .table-1x2 img {
+          width: 100%;
+          height: auto;
+        }
+      }
       
     </style>
   </head>
@@ -301,18 +344,18 @@
 
     <div class="content">
       <div class="backButton">
-        <a href="index.html" class="nav-link"><- Back</a>
+        <a id="backButton" class="nav-link"><- Back</a>
       </div>
       <div class="titleElement">
         Mean Girls Marketing
       </div>
         
       <div class="displayedWork">
-        <img src="public/MichaelGvozdek - Mean Girls Poster-Final-LOWRES.png" alt="Mean Girls poster" style="width: 50%">
+        <img src="public/MichaelGvozdek - Mean Girls Poster-Final-LOWRES.png" alt="Mean Girls poster" class="workImage">
       </div>
 
       <div class="displayedWork"> 
-        <img src="public/Mean Girls Logo Black.png" alt="Mean Girls Logo" style="width: 50%">
+        <img src="public/Mean Girls Logo Black.png" alt="Mean Girls Logo" class="workImage">
       </div>
 
       <div class="paraElement" style="margin-top: 25px;">
@@ -381,5 +424,16 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
+    const backButton = document.getElementById('backButton');
+
+      backButton.addEventListener('click', function(event) {
+      event.preventDefault(); // Stop default link behavior
+
+      if (window.innerWidth <= 800) {
+        window.location.href = 'indexMobile.html';
+      } else {
+        window.location.href = 'index.html';
+      }
+    });    
   </script>
 </html>
