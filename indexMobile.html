@@ -32,6 +32,7 @@
       .sectionTwo {
         width: 100%;
         min-height: 100vh;
+        padding-bottom: 5vh;
         background-color: #1e1f1e;
         /* dark grey */
       }
@@ -72,7 +73,8 @@
       
       .sectionContact {
         width: 100%;
-          height: 100vh;
+        min-height: 100vh;
+        padding-bottom: 10vh;
         background-color: #1e1f1e;
       }
 
@@ -247,33 +249,5 @@
       </div>
     </div>
 
-
-<script>
-function loadAppropriatePage() {
-    // If screen width is less than 800px, load the mobile version
-    if (window.innerWidth < 800) {
-      if (!localStorage.getItem('redirectedToMobile')) {
-        localStorage.setItem('redirectedToMobile', 'true');
-        window.location.href = 'indexMobile.html';
-      }
-    } 
-    // If screen width is 800px or more, load the desktop version
-    else {
-      if (localStorage.getItem('redirectedToMobile')) {
-        localStorage.removeItem('redirectedToMobile');
-        window.location.href = 'index.html';
-      }
-    }
-  }
-
-  // Initial check when the page is loaded
-  window.addEventListener('load', loadAppropriatePage);
-
-  // Dynamically check for screen resize
-  window.addEventListener('resize', function() {
-    loadAppropriatePage();
-  });
-
-</script>
   </body>
 </html>
