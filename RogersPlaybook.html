@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final-HomePage</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+      }
+
+      .displayedWork {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+        
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+      }
+
+      .table-1x5 {
+        margin-top: 50px;
+        width: 60vw;
+        max-width: 75vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 50%;
+        padding: 0 5vw;
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a id="backButton" class="nav-link"><- Back</a>
+      </div>
+      <div class="titleElement">
+        Rogers PlayBook
+      </div>
+
+      <div class="displayedWork">
+        <img src="public/Frame 12.png" alt="Rogers media screen" class="workImage">
+      </div>   
+
+<h2 class="sectionTitle">The Situation</h2>
+      <div class="paraElement">
+        <p>At the Uxperience Design Jam in 2025, hosted by Rogers and the Stratford school of Interaction Design, each group was tasked with revitalizing Rogers current loyalty system - Beyond the Seat. Previously Rogers’ loyalty program faced a <b>98% customer awareness gap</b> and our challenge was to <b>increase customer engagement and visibility</b>. <br><br>
+          Each group had 8 hours to create an idea, prototype it, and present it to the Rogers mentors.
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">Our Methods</h2>
+      <div class="paraElement">
+        <p>The foundation of every project is the idea, and that is what we spent most of our time on. We knew one of the main problems with the current loyalty system was that customers didn't know what it was. With a focus on awareness, retention, and uniqueness, our group began brainstorming.<br><br>
+          
+          <b>Research</b><br>
+          With a limited timeframe, our group began conducting secondary research on other companies loyalty programs like Bell, as well as industry trends and user statistics.<br><br>
+
+          <b>Personas</b><br>
+          We identified that the majority of users who would be able to access Rogers loyalty program were adults aged between 20-50. Family households generally only have parents able to access wifi services, and we realized that expanding the rewards program for <b>kids</b> could be promising.
+
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">Design Thinking</h2>
+        <div class="paraElement"> <p>Our team followed a human-centered design thinking process to develop the program with our focus on awareness, retention and uniqueness. With limited time, the five-step method was used but wasn't able to be fully implemented. Some useful insights from the method were:<br><br>
+
+          <b>Define</b><br>
+          Based on our research, we identified key pain points: a lack of awareness, low excitement around rewards, and minimal personalization. By inquiring with the Rogers mentors, we learned that sports was the biggest selling point of the loyalty program as well as their biggest industry connection, and we decided to focus on that.<br><br>
+          
+          <b>Ideate</b><br>
+          We conducted a thorough brainstorming session with group sketching. Ideas ranged from next-gen experiences to digital badges to real-world rewards tied to family plans. We prioritized concepts that were both unique and feasible within the Rogers ecosystem.<br><br>
+
+          Due to our ideation process, we were able to settle on these final ideas for the program:<br><br> Customers will be able to view AR seats for sports games to elevate their viewing experience from home. A reward card will be integrated into the Apple Wallet to allow loyal customers to easily keep track of points, as well as scan their card at airports, sports games and more to earn exclusive benefits. Customers with the reward card would be able to skip lines, wait in exclusive lounges, and collect unique rewards. Lastly, to increase retention customers watching Rogers media from home will be able to keep a "streak" that will increase their rewards the more they watch.<br><br>
+          
+          <b>Prototype</b><br>
+          Using Figma, we developed wireframes, then mockups that showcased the rewards card in the apple wallet, a fresh new rewards screen on the Rogers app, and a new take on the Rogers media home screen - for TV's.<br><br>
+          </p> </div>     
+        
+          <table class="table-1x5">
+            <tr>
+              <td><img src="public/After 2.0 (1).png" class="progress-img" alt="Image 1"></td>
+              <td><img src="public/Frame 8 (2).png" class="progress-img" alt="Image 2"></td>
+
+            </tr>
+          </table>  
+
+          <div class="displayedWork">
+            <img src="public/Sports TV.png" alt="Rogers media screen" class="workImage">
+          </div>    
+
+          <h2 class="sectionTitle">Our Pitch - Rogers: <b>PlayBook</b></h2>
+          <div class="paraElement">
+            <p>Rogers Playbook was our final, condensed idea presented to the judges. To increase customer awareness, we did a redesign of the Rogers rewards page on their app, with UI improvements that allow users to better track their rewards on mobile and on home TV's.<br><br>
+
+            Keeping users engaged was vital, so to increase retention we implemented the streak system that would make users feel connected to their rewards, if they stop or switch providers they would miss out on potential winnings.<br><br>
+
+            Lastly, in order to make Rogers Playbook truly unique we implemented next gen technology like AR into home sports viewing, as well as introduced famous player commentary for sports streams. Using AR allows customers to switch views live while they are watching a game - This makes the experience more engaging and unique.
+            </p>
+          </div>
+        
+          <h2 class="sectionTitle">My Personal Contributions</h2>
+          <div class="paraElement">
+            <p>Designed Rogers Playbook Card. Designed mockups for Rogers app, Apple Wallet, Rogers Media. Inquired with Rogers mentors, Conceptualized retention program, Researched Rogers User statistics.
+            </p>
+          </div>
+
+          <h2 class="sectionTitle">Conclusion</h2>
+          <div class="paraElement">
+            <p>Although my team didn't take home first place, the experience of working in a team of new people and going through the five step process helped me learn alot about the five-step process as well as UI principles. My brainstorming and collaboration skills were put to the test, and came out better than ever. This experience truly excited me to learn more about UI/UX and I'm eager for the next design jam!
+            </p>
+          </div>
+        
+      <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2025</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+          <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    const backButton = document.getElementById('backButton');
+
+    backButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Stop default link behavior
+
+    if (window.innerWidth <= 800) {
+      window.location.href = 'indexMobile.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+    });
+  </script>
+</html>
