@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Battlefield 6 Redesign</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+ .contacts {
+      flex: 1;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+      
+      a.contact:link {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #FF9409;
+        text-decoration: none;
+      }
+      a.contact:visited {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      color: #FF9409;
+      text-decoration: none;
+    }    
+     a.contact:hover {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #DF1D08;
+        text-decoration: none;
+
+      } 
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+      }
+
+      .displayedWork {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .Banner {
+        margin-top:75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+        
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+        }
+
+       .table-1x5 {
+        margin-top: 25px;
+        width: 50vw;
+        max-width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 25%;
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .table-1x5 img:hover{
+        cursor: zoom-in;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a id="backButton" class="nav-link"><- Back</a>
+      </div>
+
+      <div class="Banner">
+        <img src="public/Horizontal Banner.png" alt="Horizontal Banner" class="workImage">
+      </div>   
+
+<h2 class="sectionTitle">My Objective</h2>
+      <div class="paraElement">
+        <p>Battlefield 6 was incredibly well received upon it’s launch, However upon playing it myself and hearing criticism from other players about it’s lackluster menu screens, I decided to redesign the UI myself as a fan  project. I gathered feedback and criticism about the original UI from sources like Reddit, reviews from the Microsoft store, and with my own playtesting. <br><br> With my redesign I made it my mission to address player feedback, improve the aesthetics of the menu, and smoothen the user journey. The main screens that I focused on were the <b>home screen</b>, <b>multiplayer screen</b>, <b>campaign screen</b>, and <b>server browser</b>.
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">User Research</h2>
+      <div class="paraElement">
+        <p>In order to make my redesign as effective as possible, I gathered all the criticism and feedback about the original UI I could and condensed it into the main things I needed to change. I already had my own opinions about the main menu, but Reddit was crucial in gathering a large amount of criticism from real people. Some of the main things that stood out were:<br><br>
+
+        - Players felt that the “Netflix” style horizontal scrolling has been overused in games recently and felt it was unoriginal, especially compared to games like Call of Duty.<br>
+        - The home screen’s featured area was being used mostly for advertisements.<br>
+        - The main menu had a large information overload that made it hard for players to find the most popular modes, with many of them being hidden behind layers of scrolling.<br>
+        - The main menu had a confusing combination of vertical and horizontal scrolling to navigate.<br>
+        - Every game mode was crammed into the home page, rather than having them separated like previous titles.<br>
+        - The game was lacking a server browser that allowed players to see specific servers.<br><br>
+
+        With these things in mind, I realized there were drastic changes that needed to be made to improve the user experience as well as to bring the aesthetics back to the classic Battlefield style, while still feeling modern.<br><br>
+
+        Once I had my first prototype ready, I posted it to Reddit and gathered all the feedback I could to improve my next revision. The majority of commentors loved what I had done, but a lot of people had a shared opinion that the multiplayer screen was not yet an improvement. With that in mind I took their feedback and used it to improve my multiplayer screen design. <br><br>
+
+        See what the Reddit community had to say about my first revision here: <a class="contact" href="https://www.reddit.com/r/Battlefield/comments/1opcw2b/my_bf6_ui_redesign/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">www.reddit.com/r/my_bf6_ui_redesign </a>
+        </p>
+      </div>
+        
+        <h2 class="sectionTitle">My Updated Home Screen Vs The Original Home Screen</h2>
+
+          <table class="table-1x5">
+            <tr>
+              <td><img src="public/Play Screen Interactive.jpg" class="progress-img" alt="Michaels Redesigned Home Screen"></td>
+              <td><img src="public/bf6-new-updated-menu-at-launch-v0-cph3iu8lwvtf1.jpg" class="progress-img" alt="Original Home Screen"></td>
+            </tr>
+          </table>  
+
+        <h2 class="sectionTitle">The Home Screen</h2>
+        <div class="displayedWork">
+        <img src="public/Play Screen Interactive.jpg" alt="Michaels Home Screen" class="workImage">
+      </div>     
+
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+      </div>
+
+
+        <div class="paraElement"> <p>My redesigned home screen pays homage to classic Battlefield titles with it’s design while simplifying and streamlining the order of the displayed information. From my research I found that most of the criticism about the original home screen was about it’s unoriginal horizontal layout, it’s information being too cramped, and the majority of the screen being used for advertisements. My design addresses these issues by focusing on <B>visual hierarchy</B>, <B>minimalism</B>, and the <B>user journey</B>, ensuring that the most important options stand out clearly and are easy to access.<br><br>
+
+        By removing advertisements from the home page and organizing content into its own tabs (Multiplayer, Campaign) I was able to create a much less cluttered design that allows the user to find exactly what they want, faster. Drawing inspiration from the successful layouts of Battlefield 3 and 4, the design stays consistent and familiar. I realize that the designers for the original home page likely had to include advertisement space as well as a larger store page, but for the sake of this fan redesign I chose to remove those features to enhance my hypothetical user journey.<br><br>
+
+        The most important options (Multiplayer, Campaign, Portal, Training) are placed prominently with bold, high-contrast text. This directs attention immediately to the primary actions and reduces the cognitive load for the user. Instead of overwhelming users with too many options at once, information is revealed step by step, this keeps each screen focused and digestible.<br><br>
+
+        Having separate screens for multiplayer and the campaign makes it much less confusing for the user to find a specific mission or game mode from the home page. Rather than the user scrolling through a confusing combination of vertical and horizontal lists, they can select either the campaign or multiplayer, and then select a mission or mode from there. While doing it this way adds steps to the user journey, it allows them to go through simpler, sequential steps instead of one overwhelming information heavy screen.<br><br>
+
+        The original UI did not have separate screens for the multiplayer and campaign, so I had free reign for my designs starting with the campaign:
+        </p> </div>     
+        
+
+          <h2 class="sectionTitle">The Campaign Screen</h2>
+
+           <div class="displayedWork">
+            <img src="public/Campaign Screen 1.jpg" alt="Michaels Home Screen" class="workImage">
+          </div>   
+          <table class="table-1x5">
+            <tr>
+              <td><img src="public/Campaign Screen 2.jpg" class="progress-img" alt="Image 1"></td>
+              <td><img src="public/Campaign Screen 3.jpg" class="progress-img" alt="Image 2"></td>
+            </tr>
+          </table>
+
+          <div class="paraElement">
+            <p>My campaign screen continues the theme of clarity and focus established on the home screen. I ensured that visual hierarchy and immersion was prioritized on every screen. The bold “CAMPAIGN” title was used to clearly communicate where the user is, while the supporting text provides some simple context about the story. In a full prototype I would change the text to be a description of each mission rather than for just the campaign.<br><br>
+
+            The use of space and minimal on-screen text demonstrates progressive disclosure, ensuring users focus on a few missions at a time rather than the entire list. I purposely made the buttons prompts at the bottom subtle to make it clear how to navigate while staying undistracting.<br><br>
+
+            My design prioritizes control and immersion, removing distractions so players can move directly from setup to gameplay. The minimal style of these designs is meant to allow players to be fully immersed in the campaign before it even starts, by making the main appeal of the pages the imagery.
+            </p>
+          </div>
+        
+          <h2 class="sectionTitle">The Multiplayer Screen</h2>
+          <div class="paraElement">
+            <p>My multiplayer screens went through the most revisions compared to the rest of the designs. The feedback I gathered from real people on Reddit heavily influenced and improved the final designs for these screens.
+            </p>
+          </div>
+
+           <div class="displayedWork">
+            <img src="public/Multiplayer Screen MAIN - conquest.jpg" alt="Michaels Home Screen" class="workImage">
+          </div>   
+          <table class="table-1x5">
+            <tr>
+              <td><img src="public/Multiplayer Screen MAIN - Breakthrough.jpg" class="progress-img" alt="Image 1"></td>
+              <td><img src="public/Multiplayer Screen MAIN - Server Browser.jpg" class="progress-img" alt="Image 2"></td>
+            </tr>
+          </table>
+
+          <div class="paraElement">
+            <p>Below you can see my original mock-up on the left, a more refined version in the middle, and the final one on the right that was influenced by community feedback.
+              People were very vocal about disliking the large tiles I originally had and they made me realize that most of the screens these designs would be on would be at least 16 inches. This meant that I could fit more info on the screen and use smaller text sizes than I originally realized. The final version of my design focused on presenting the game modes in a clear, structured layout. <br><br>Ditching the original large tile design allowed me to fit much more info on the screen while still keeping it simple. The layout of the final design allows the user to quickly scan through every mode rather than have to scroll through a long list. The server browser mode is visually separated from the rest to highlight that it is not a traditional game mode like the rest.
+            </p>
+          </div>
+
+            <table class="table-1x5">
+            <tr>
+              <td><img src="public/Multiplayer Screen 222.jpg" class="progress-img" alt="Image 1"></td>
+              <td><img src="public/Multiplayer Screen.png" class="progress-img" alt="Image 2"></td>
+              <td><img src="public/Multiplayer Screen MAIN - conquest.jpg" class="progress-img" alt="Image 3"></td>
+            </tr>
+          </table>
+
+          <h2 class="sectionTitle">The Server Browser Screens</h2>
+
+          <div class="displayedWork">
+            <img src="public/Server Browser Screen.jpg" alt="Michaels Home Screen" class="workImage">
+          </div>     
+
+          <table class="table-1x5">
+                    <tr>
+                      <td><img src="public/Server Favourites Screen.jpg" class="progress-img" alt="Michaels Redesigned Home Screen"></td>
+                      <td><img src="public/Server Recents Screen.jpg" class="progress-img" alt="Original Home Screen"></td>
+                    </tr>
+                  </table>  
+
+          <div class="paraElement">
+            <p>Upon the time of this redesign, Battlefield 6 doesn’t have a server browser function. Instead it has a similar custom search function, but players can’t choose individual servers to join. With a server browser being missing from the game, I once again had free reign to design one from scratch.<br><br>
+
+            My server browser design focuses on <b>clarity</b>, <b>control</b>, and <b>usability</b> - in contrast to the showy campaign screens. The layout organizes server data into a structured bar, that is then presented in a vertical list. This creates a strong information hierarchy and reduces visual clutter, making it easier to locate familiar servers or maps. Having a text only layout would make each server look too similar, so to improve accessibility and clarity I added a small thumbnail. The thumbnail acts like a visual anchor that lets users quickly identify different servers, and it can even allow them to find one they want without reading any text. The buttons at the bottom were designed to feel familiar and intuitive. The clear text along with their icons ensures users don’t get confused about any of their functions. I went for a familiar Battlefield design style that makes the interface instantly understandable to returning players, shortening their learning curve.<br><br>
+
+            By streamlining the presentation of all the server data and removing any unneeded visuals, my design improves efficiency while not overloading users with too much information. This makes browsing servers a fast and smooth experience that allows users to spend more time in the game rather than the menu. 
+          </div>
+
+          <h2 class="sectionTitle">(Extra) The Armory and Customize Screens </h2>
+          <table class="table-1x5">
+                    <tr>
+                      <td><img src="public/Armory Screen.jpg" class="progress-img" alt="Michaels Redesigned Home Screen"></td>
+                      <td><img src="public/Assault Customize Screen.jpg" class="progress-img" alt="Original Home Screen"></td>
+                    </tr>
+                  </table>  
+          <div class="paraElement">
+            <p>These two screens weren’t the main focus of my redesign, but I still created my own mockups for fun. These screens were particularly challenging to redesign due to there being a limited number of images of them I could use. I also couldn’t find any good enough quality images of just the characters so I had to stick to full screenshots. The icons for the customize screen were also too low resolution for me to extract individually which led to me having to use the toolbar from the original game, just recoloured.<br><br>
+
+            Both these designs use the same navigation bar at the bottom to keep things consistent, since they are connected to the multiplayer screen. I opted to use the bumper buttons to navigate through the screens because it allows for the left stick to be free to navigate through buttons like the classes and gear. In contrast to the screens from the original game, I went for a slightly less information heavy design to give both screens a cleaner and less distracting feel.
+          </div>          
+        
+          <h2 class="sectionTitle">Final Thoughts</h2>
+          <div class="paraElement">
+            <p>Overall, I am super happy with how my redesigns turned out. This was my favourite major UI/UX project and I learned lots about several UX design principles. Working with a game I’m a long time fan of like Battlefield made this an extra exciting design for me. Seeing all the community compliments and feedback on Reddit made me very proud, but it also gave me valuable insights that made my final project much stronger. I left many features out of my redesign like the store, advertisement space, and more, and leaving them out only made me realize how much bigger of a job full-scale UI design is than I thought. I also want to say that I never disliked or hated any of Battlefield 6’s original screens, I just took on this redesign as a fun side project.
+          </div>         
+
+
+
+      <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2025</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+          <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    const backButton = document.getElementById('backButton');
+
+    backButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Stop default link behavior
+
+    if (window.innerWidth <= 800) {
+      window.location.href = 'indexMobile.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+    });
+  </script>
+</html>
