@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Design</title>
+    <!--Created by <Michael Gvozdek> on <2024/11/04> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .regular {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .medium {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .bold {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      #nav {
+        flex: 1;
+      }
+
+      #nav ul {
+        list-style-type: none;
+        padding: 5px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      #nav li {
+        float: left;
+        padding: 25px 25px 10px 50px;
+      }
+
+      #nav a:link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      /* visited link */
+      #nav a:visited {
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+
+      /* mouse over link */
+      #nav a:hover {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+      /* selected link */
+      #nav a:active {
+        color: #e8ebe7;
+        text-decoration: none;
+      }
+
+ .contacts {
+      flex: 1;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+      
+      a.contact:link {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #516543;
+        text-decoration: none;
+      }
+      a.contact:visited {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      color: #516543;
+      text-decoration: none;
+    }    
+     a.contact:hover {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #a9a9a9;
+        text-decoration: none;
+
+      } 
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        flex: none;
+        display: block;
+      }
+
+      .contacts {
+        color: white;
+        flex: 1;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 75px;
+      }
+
+      .background {
+        width: 100%;
+      }
+
+      .back {
+        background-color: #1e1f1e;
+        height: 2800px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+      }
+
+      .displayedWork {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .Banner {
+        margin-top:75px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+      }
+
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      }
+
+      .footer {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #516543;
+        font-size: 2em;
+        margin-top: 200px;
+      }
+
+      .contactsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 150px;
+
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+        color: #a9a9a9;
+        line-height: 30px;
+        
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+      }
+
+      b {
+        color: #516543;
+      }
+
+      .nav-link {
+        color: #a9a9a9;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-link:hover {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+        }
+
+       .table-1x5 {
+        margin-top: 25px;
+        width: 50vw;
+        max-width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 25%;
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .table-1x5 img:hover{
+        cursor: zoom-in;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .sectionTitle {
+        color: #e8ebe7;
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: left;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 5px;
+      }
+
+      .verticalVid {
+        width: 95%;
+        height: auto;;
+      }
+
+      .horizontalVid {
+        width: 45%;
+        height: auto;;
+      }
+
+      .workImage {
+        width: 50%;
+      }
+      
+      @media (max-width: 800px) {
+        .sectionTitle {
+          width: 85%;
+        }
+
+        .paraElement {
+          width: 85%; 
+          text-align: left;
+        }
+
+        .titleElement {
+          width: 85%;
+          margin-top: 15vh;
+          line-height: 8vh;
+        }
+
+        .backButton {
+          left: 10%;
+        }
+        .workImage {
+          width: 85%;
+        }
+        
+        .table-1x5 {
+          width: 85%;
+          max-width: 85%;
+
+        }
+
+        .table-1x5 td {
+          width: auto;
+        }
+
+        .table-1x5 img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="public/MichaelGvozdek - SilhouetteLogo.png">
+
+  <body class="back">
+    <div class="content">
+      <div class="backButton">
+        <a id="backButton" class="nav-link"><- Back</a>
+      </div>
+
+    <div class="titleElement">
+        3D Design
+      </div>
+
+    <h2 class="sectionTitle">3D Animations</h2>
+
+          <table class="table-1x5">
+                    <tr>
+                      <td>
+                        <video class="verticalVid" controls width="200" height="350">
+                            <source src="public/Final Cut or something.mp4" type="video/mp4">
+                            Your browser does not support the video tag, view the video on <a href="https://www.instagram.com/p/DT_j38cEbcp/">Instagram</a> instead.
+                        </video>
+                        </td>
+
+                        <td>
+                        <video class="verticalVid" controls width="200" height="350">
+                            <source src="public/headphones Animation0001-0250.mp4" type="video/mp4">
+                            Your browser does not support the video tag, view the video on <a href="https://www.instagram.com/p/DT_j38cEbcp/">Instagram</a> instead.
+                        </video>
+                        </td> 
+                        
+                        <td>
+                        <video class="verticalVid" controls width="200" height="350">
+                            <source src="public/Dana Porter Animation0001-0250.mp4" type="video/mp4">
+                            Your browser does not support the video tag, view the video on <a href="https://www.instagram.com/p/DT_j38cEbcp/">Instagram</a> instead.
+                        </video>
+                        </td>
+
+                    </tr>
+                  </table>  
+
+              
+
+
+
+        
+        <h2 class="sectionTitle">My Creative Process</h2>
+      <div class="paraElement">
+        <p>Coming from a background of 2D design, 3D modeling and animation was a new and exciting challenge for me. Through trial and error I became better and better at using Blender, and developed modeling skills relatively quickly. I realized working in 2D and 3D have similar creative processes, and I was able to use my existing design knowledege to put together my first few projects. My process is relatively similar to 2D design, and starts with:
+        </p>
+      </div>
+
+        <h2 class="sectionTitle">Inspiration</h2>
+        <div class="paraElement">
+        <p>Before starting a 3D project, I need inspiration. This comes from many places for me, including social media, architecture, and most importantly music. Listening to music often makes me develop ideas and stories in my head, and I am able to come up with the pacing and style for an animation before I even start if I know what song I want to use.
+        </p>
+      </div>
+       
+        <h2 class="sectionTitle">Prototyping</h2>
+        <div class="paraElement">
+        <p>I have found 3D design to be much more technical than 2D design, and so prototyping is very important in my process. I generally start with reference images to make sure my models are all in scale. I then test out certain animation techniques and adjust my vision for my final product based on what has and hasn't worked in my prototypes.
+        </p>
+      </div>
+
+        <h2 class="sectionTitle">Design</h2>
+        <div class="paraElement">
+        <p>Once I have found a way to achieve what I want, I start working on all the final touches. This includes the last details for modeling, laying out the entire scene, lighting, and creating shaders/textures.
+        </p>
+      </div>
+
+        <h2 class="sectionTitle">Final Tests</h2>
+        <div class="paraElement">
+        <p>Rendering 3D animations takes a long time, so I make sure everything is perfect before I start the render. I generally test each feature one by one to try to isolate any bugs or issues. A common example of this in Blender is to run the animation without textures or any extra elements, then add each detail on one by one until I'm sure the whole thing works together as one piece.
+        </p>
+      </div>
+
+        <div class="paraElement">
+        <p>For more 3D modeling and animation projects, you can see more on my Instagram @<a class="contact" href="https://www.instagram.com/p/DT_j38cEbcp/">jobuandme</a>.
+        </p>
+      </div>
+
+      <div class="textBox">
+        <h1 class="footer"> Michael Gvozdek 2026</h1>
+        <div class="contactsFooter">
+          <a href="http://www.youtube.com/@jobuandme">
+            <img src="public/Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">
+          <img src="public/Linkedin.png" alt="description of image" style="width: 35px; height: 35px; transform: translateY(-4px);"></a>
+
+          <a href="mailto:michaelgvozdek@icloud.com">
+            <img src="public/mail.png" alt="description of image" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
+
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    const backButton = document.getElementById('backButton');
+
+    backButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Stop default link behavior
+
+    if (window.innerWidth <= 800) {
+      window.location.href = 'indexMobile.html';
+    } else {
+      window.location.href = 'index.html';
+    }
+    });
+  </script>
+</html>
