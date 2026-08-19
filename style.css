@@ -64,19 +64,8 @@ body {
   margin: 0 auto;
 
   object-fit: contain;
-
-  animation: homeImageIntro 0.8s ease-in forwards;
 }
 
-@keyframes homeImageIntro {
-  from {
-    transform: scale(1.10);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
 
 
 /* =========================
@@ -120,7 +109,7 @@ body {
   font-size: clamp(48px, 5vw, 76px);
   font-weight: 900;
   line-height: 0.95;
-  letter-spacing: -3px;
+  letter-spacing: 0px;
 }
 
 
@@ -242,7 +231,7 @@ body {
 
 .contact-item strong {
   font-family: "gibson", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contact-link {
@@ -253,7 +242,7 @@ body {
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 
   text-decoration: none;
 
@@ -264,7 +253,7 @@ body {
 }
 
 .contact-link:hover {
-  font-weight: 600;
+  font-weight: 450;
 }
 
 
@@ -277,4 +266,168 @@ body {
   min-height: 100vh;
 
   background-color: var(--white);
+}
+
+
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+.projects {
+  width: 100%;
+
+  padding: 8vh 0 12vh;
+
+  background-color: var(--white);
+}
+
+.projects-container {
+  width: 60%;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   PROJECTS HEADER
+   ========================= */
+
+.projects-header {
+  width: 100%;
+
+  margin: 0 auto 9vh;
+  padding: 28px 34px;
+
+  background-color: var(--red);
+}
+
+.projects-header h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "gibson", sans-serif;
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+
+/* =========================
+   PROJECT CARD
+   ========================= */
+
+.project-card {
+  width: 100%;
+
+  margin: 0 auto 10vh;
+  padding: 32px;
+
+  border: 1px solid var(--grey);
+
+  background-color: var(--white);
+}
+
+
+/* =========================
+   PROJECT IMAGE
+   ========================= */
+
+.project-image-link {
+  display: block;
+
+  width: 100%;
+
+  text-decoration: none;
+}
+
+.project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   PROJECT TITLE
+   ========================= */
+
+.project-title {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: var(--red);
+
+  text-decoration: none;
+}
+
+.project-title h2 {
+  margin: 0;
+
+  color: inherit;
+
+  font-family: "gibson", sans-serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.project-title:hover {
+  color: var(--red);
+
+  text-decoration: underline;
+}
+
+
+/* =========================
+   PROJECT DESCRIPTION
+   ========================= */
+
+.project-description {
+  max-width: 650px;
+
+  margin: 20px 0 24px;
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+
+/* =========================
+   PROJECT CATEGORIES
+   ========================= */
+
+.project-categories {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.project-categories span {
+  display: inline-block;
+
+  width: max-content;
+
+  padding: 3px 6px;
+
+  border: 2px solid var(--red);
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+
+  line-height: 1.1;
+  white-space: nowrap;
 }
