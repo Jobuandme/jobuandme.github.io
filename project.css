@@ -1,0 +1,176 @@
+/* =========================
+   PROJECT PAGE
+   ========================= */
+
+.project-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 60px 5vw 120px;
+
+  background-color: var(--white);
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 22px 10px 16px;
+
+  border: 2px solid var(--red);
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+
+  stroke: currentColor;
+}
+
+.back-button:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+
+/* =========================
+   PROJECT CONTAINER
+   ========================= */
+
+.project-container {
+  max-width: 60vw;
+
+  margin: 60px auto 0;
+  padding: 40px;
+
+  border: 1px solid var(--grey);
+
+  background-color: var(--white);
+}
+
+
+/* =========================
+   PLACEHOLDER IMAGES
+   ========================= */
+
+.placeholder-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 16 / 8;
+
+  border: 1px dashed var(--grey);
+
+  background-color: #DCDCDC;
+
+  color: var(--grey);
+
+  font-family: "gibson", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/* =========================
+   PROJECT HEADER
+   ========================= */
+
+.project-header {
+  margin: 32px 0 12px;
+
+  color: var(--red);
+
+  font-family: "gibson", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+/* =========================
+   PROJECT BODY TEXT
+   ========================= */
+
+.project-body {
+  max-width: 700px;
+
+  margin: 0 0 20px;
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.project-highlight {
+  color: var(--red);
+  font-weight: 700;
+}
+
+
+/* =========================
+   PROJECT CALLOUT
+   ========================= */
+
+.project-callout {
+  margin: 12px 0 32px;
+  padding: 28px;
+
+  background-color: #DCDCDC;
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+/* =========================
+   PROJECT IMAGE GRID
+   ========================= */
+
+.project-image-grid {
+  display: flex;
+
+  gap: 16px;
+}
+
+.project-image-grid .placeholder-image {
+  flex: 1 1 0;
+  aspect-ratio: 4 / 3;
+}
+
+.project-image-grid .project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
