@@ -104,6 +104,21 @@
   line-height: 1;
 }
 
+/* =========================
+   PROJECT SUBHEADER
+   ========================= */
+
+.project-subheader {
+  margin: 28px 0 10px;
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
 
 /* =========================
    PROJECT BODY TEXT
@@ -117,7 +132,7 @@
   color: var(--black);
 
   font-family: "gibson", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -141,7 +156,7 @@
   color: var(--black);
 
   font-family: "gibson", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -170,7 +185,4 @@
 
   flex: 1 1 0;
   min-width: 0;
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
 }
