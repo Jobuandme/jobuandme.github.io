@@ -21,7 +21,7 @@
   align-items: center;
   gap: 6px;
 
-  padding: 10px 22px 10px 16px;
+  padding: 6px 14px 7px 8px;
 
   border: 2px solid var(--red);
 
@@ -149,7 +149,7 @@
 
 .project-callout {
   margin: 12px 0 32px;
-  padding: 28px;
+  padding: 20px;
 
   background-color: #DCDCDC;
 
@@ -157,8 +157,10 @@
 
   font-family: "gibson", sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4;
+  font-style: italic;
+
 }
 
 
@@ -167,9 +169,10 @@
    ========================= */
 
 .project-image-grid {
+  margin-top: 1vw; 
   display: flex;
 
-  gap: 16px;
+  gap: 1vw;
 }
 
 .project-image-grid .placeholder-image {
@@ -185,4 +188,30 @@
 
   flex: 1 1 0;
   min-width: 0;
+}
+
+/* =========================
+   PROJECT LIST
+   ========================= */
+
+.project-list {
+  max-width: 700px;
+
+  margin: 0 0 20px;
+  padding-left: 20px;
+
+  color: var(--black);
+
+  font-family: "gibson", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.project-list li {
+  margin-bottom: 6px;
+}
+
+.project-list li:last-child {
+  margin-bottom: 0;
 }
