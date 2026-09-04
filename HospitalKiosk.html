@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Check-in Kiosk</title>
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/cmm1adw.css">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Project page stylesheet -->
+    <link rel="stylesheet" type="text/css" href="project.css">
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="public/favicon2.png"
+    >
+  </head>
+
+  <body>
+    <main class="project-page">
+
+      <!-- =========================
+           BACK BUTTON
+           ========================= -->
+
+      <a href="index.html#projects" class="back-button">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 5L8 12L15 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Back
+      </a>
+
+
+      <!-- =========================
+           PROJECT
+           ========================= -->
+
+      <article class="project-container">
+
+        <h1 class="project-header" style="margin-top: 0px;">ER Self-Triage Kiosk</h1>
+        <h1 class="project-subheader">Service Design and UI/UX</h1>
+
+        <div class="project-image-grid">
+        <img
+          src="public/Welcome Screen V2 English.png"
+          alt="Welcome Screen V2 English"
+          class="project-image"
+        >
+        <img
+          src="public/Welcome Screen V2 French.png"
+          alt="Welcome Screen V2 French"
+          class="project-image"
+        >
+        </div>
+
+        <div class="project-image-grid">
+        <img
+          src="public/Keyboard Search Screen.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        <img
+          src="public/Chief Complaint Screen Main V2.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        <img
+          src="public/tell us more.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        </div>
+
+        <h1 class="project-subheader">The Project and My Role</h1>
+
+        <p class="project-body">
+          This was a term-long service design project for GBDA 301 at Waterloo. <strong class="project-highlight">The problem:</strong> about a third of ER patients have limited English proficiency, and low-priority cases pull Triage Nurse time away from bigger emergencies. <br>I was the lead digital prototyper as well as a graphic designer on a 6-person team, responsible for the Figma UI, the prototype's visual identity, and user testing.
+        </p>
+        <p class="project-body">
+            <strong class="project-highlight">Our Solution:</strong><br>
+           A self-service kiosk that lets low-priority patients sign themselves in, switch languages, and get routed with a printed triage code - fully optional, so no one gets stuck if they'd rather talk to a nurse.
+        </p>
+
+        <h1 class="project-subheader">Our Goals</h1>
+        <p class="project-body">
+          Reduce registration delay from language barriers, ease strain on Triage Nurses during high-volume periods, and let every design decision get validated through real user testing instead of assumption.
+        </p>
+
+
+        <h1 class="project-subheader">Problem Framing</h1>
+
+        <div class="project-callout">
+          ED demand had  <strong class="project-highlight">surpassed system capacity</strong> by 2022–2023, with wait times climbing and more patients falling into CTAS Levels 2–3. <br><br>    
+          31% of observed patients were <strong class="project-highlight">Limited English Proficient</strong>  (LEP); of those, 67% spoke a Chinese dialect
+        </div>
+
+        <h1 class="project-subheader">Our Research Questions</h1>
+        <div class="project-callout">
+          How can ER intake systems reduce registration delays caused by language barriers by end of 2025?. <br><br>    
+          What service design interventions can reduce strain on Triage Nurses during high-volume registration?
+        </div>
+
+
+
+        <h1 class="project-header">Prototyping and Testing</h1>
+        <p class="project-body">
+          Before finalizing any of our screens, we ran two rounds of testing with a physical kiosk prototype. We ran a low-fidelity bodystormed session, then a high-fidelity round after revisions. 
+        </p>
+
+       <div class="project-image-grid">
+        <img
+          src="public/Kiosk early.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        <img
+          src="public/Kiosk.jpeg"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        <img
+          src="public/kiosk close.jpeg"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        </div>
+
+        <p class="project-body" style="margin-top: 20px;">
+          Our testing protocol included:
+        </p>
+
+        <ul class="project-list" style="margin-top: 10px;">
+        <li><strong class="project-highlight">Think-aloud</strong> walkthrough of a scenario (abdominal pain with mild chest pain)</li>
+        <li><strong class="project-highlight">TAM survey</strong> (7-item, 7-point Likert) on perceived usefulness and ease of use</li>
+        <li>Brief <strong class="project-highlight">post-use interview</strong> asking what confused or reassured them</li>
+        </ul>
+
+
+
+
+
+
+
+        <h1 class="project-header">The Symptom Screen</h1>
+        <p class="project-body">
+          After our testing sessions, we found that the symptom selection screen was the main pain point for users. This is what we learned:
+        </p>
+
+        <ul class="project-list" style="margin-top: 10px;">
+        <li>The original symptom screen was a dense grid - one participant said it "<i>jumps right at your face</i>," <strong class="project-highlight">too many options at once</strong></li>
+        <li>Testers wanted <strong class="project-highlight">more language options</strong>, since "not everybody in the emergency room is a native English speaker"</li>
+        <li>A receptionist desk placed next to the kiosk confused people about where to go first</li>
+        </ul>
+
+        <p class="project-body">
+          <i>Updated symptom screen vs. the low-fidelity grid version:</i>
+        </p>
+        <div class="project-image-grid">
+        <img
+          src="public/Chief Complaint Screen Main V2.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        <img
+          src="public/Chief Complaint Screen Main old.png"
+          alt="kiosk screen"
+          class="project-image"
+        >
+        </div>
+
+
+        <p class="project-body" style="margin-top: 10px;">
+          <strong class="project-highlight">The problem</strong>: the grid buried symptoms behind small text and forced users to scan the whole screen before acting - this was definitely not ideal for someone in pain or under stress.<br><br>
+
+          <strong class="project-highlight">The fix</strong>: Swapped the grid for a vertical, searchable list with larger text. People already know how to search a list the way they'd search a menu, so it needs no learning curve.
+        </p>
+
+
+        <h1 class="project-subheader">High-Fidelity Prototype Results</h1>
+        <ul class="project-list" style="margin-top: 10px;">
+        <li>Users reported the kiosk would speed up triage (avg 6.0/7 on TAM) and felt easy to learn (6.0/7)</li>
+        <li>Moderate scores on symptom communication (4.75/7) and self-sufficiency (4.75/7) flagged that search discoverability and end-of-flow instructions still needed work</li>
+        <li>Multiple participants asked for audio support or text-to-speech for people who can't read or are under stress</li>
+        </ul>
+  
+        <h1 class="project-header">The Sign in Screen</h1>
+        <p class="project-body">
+          The original design assumed English fluency. Testers said otherwise, and the research backed it up: 31% of ER patients are limited-English-proficient, and 67% of those speak a Chinese dialect.
+        </p>
+
+        <p class="project-body"> 
+            <strong class="project-highlight">The Fix: </strong>
+          put language choice as the very first interaction, so users are able to navigate the rest of the screens in their preferred language.
+        </p>
+
+        <p class="project-body">
+          <i>Updated welcome screen vs. the low-fidelity version:</i>
+        </p>
+        <div class="project-image-grid">
+        <img
+          src="public/Welcome Screen V2 English.png"
+          alt="welcome screen"
+          class="project-image"
+        >
+        <img
+          src="public/Welcome Screen OLD.png"
+          alt="old welcome screen"
+          class="project-image"
+        >
+        </div>
+
+      </article>
+    </main>
+  </body>
+</html>
