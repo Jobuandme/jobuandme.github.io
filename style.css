@@ -58,7 +58,7 @@ body {
 .home-image {
   display: block;
 
-  width: min(85vw, 1600px);
+  width: min(95vw);
   height: auto;
 
   margin: 0 auto;
