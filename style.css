@@ -97,7 +97,7 @@ body {
 .information-header {
   padding: 55px 5.2vw 35px;
 
-  border-bottom: 1px solid var(--white);
+  border-bottom: 2px solid var(--white);
 }
 
 .information-header h1 {
@@ -106,7 +106,7 @@ body {
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-size: clamp(48px, 5vw, 76px);
+  font-size: clamp(20px, 5vw, 120px);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -3px;
@@ -121,9 +121,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  min-height: 140px;
+  min-height: 180px;
 
-  border-bottom: 1px solid var(--white);
+  border-bottom: 2px solid var(--white);
 }
 
 .information-row:last-child {
@@ -136,7 +136,7 @@ body {
    ========================= */
 
 .information-label {
-  padding: 16px 5.2vw;
+  padding: 32px 5.2vw;
 }
 
 .information-label h2 {
@@ -145,7 +145,7 @@ body {
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-size: 20px;
+  font-size: clamp(28px, 3vw, 45px);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -156,18 +156,18 @@ body {
    ========================= */
 
 .information-content {
-  padding: 16px 5.2vw;
+  padding: 32px 5.2vw;
 }
 
 .information-content p {
-  max-width: 600px;
+  max-width: 35vw;
 
-  margin: 0 0 7px;
+  margin: 0 0 14px;
 
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -183,7 +183,7 @@ body {
 
 .skills {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
 
   gap: 35px;
 }
@@ -191,14 +191,14 @@ body {
 .skills-column {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 16px;
 }
 
 .skills-column span {
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -218,15 +218,15 @@ body {
 
 .contact-item {
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr);
+  grid-template-columns: 14vw minmax(0, 1fr);
 
   align-items: baseline;
   min-width: 0;
 
   color: var(--white);
 
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 2;
 }
 
 .contact-item strong {
@@ -292,7 +292,6 @@ body {
 }
 
 
-
 /* =========================
    PROJECTS
    ========================= */
@@ -331,7 +330,7 @@ body {
   color: var(--white);
 
   font-family: "gibson", sans-serif;
-  font-size: clamp(48px, 5vw, 76px);
+  font-size: clamp(20px, 5vw, 120px);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -3px;
@@ -346,9 +345,9 @@ body {
   width: 100%;
 
   margin: 0 auto 10vh;
-  padding: 32px;
+  padding: 2.2vw;
 
-  border: 1px solid var(--grey);
+  border: 2px solid var(--grey);
 
   background-color: var(--white);
 }
@@ -383,7 +382,7 @@ body {
 .project-title {
   display: inline-block;
 
-  margin-top: 22px;
+  margin-top: 4vh;
 
   color: var(--red);
 
@@ -396,7 +395,7 @@ body {
   color: inherit;
 
   font-family: "gibson", sans-serif;
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(36px, 3vw, 72px);
   font-weight: 700;
   line-height: 1;
 }
@@ -413,14 +412,14 @@ body {
    ========================= */
 
 .project-description {
-  max-width: 650px;
+  max-width: 45vw;
 
-  margin: 20px 0 24px;
+  margin: 3vh 0 3vh;
 
   color: var(--black);
 
   font-family: "gibson", sans-serif;
-  font-size: 17px;
+  font-size: clamp(14px, 2vw, 32px);
   font-weight: 300;
   line-height: 1.35;
 }
@@ -434,7 +433,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 10px;
+  gap: 30px;
 }
 
 .project-categories span {
@@ -444,12 +443,12 @@ body {
 
   padding: 3px 6px;
 
-  border: 2px solid var(--red);
+  border: 3px solid var(--red);
 
   color: var(--black);
 
   font-family: "gibson", sans-serif;
-  font-size: 14px;
+  font-size: clamp(18px, 3vw, 24px);
   font-weight: 300;
 
   line-height: 1.1;
@@ -485,6 +484,7 @@ body {
 
 .footer-bar {
   width: 100%;
+  height: 10vh;
 
   padding: 40px 0;
 
@@ -495,7 +495,7 @@ body {
   display: flex;
   justify-content: center;
 
-  gap: 48px;
+  gap: 3vw;
 }
 
 .footer-links .contact-link {
@@ -503,20 +503,20 @@ body {
 
   text-align: center;
 
-  font-size: 16px;
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 550;
 }
 
 .footer-links .contact-link[href*="instagram"] {
-  width: 80px;
+  width: 140px;
 }
 
 .footer-links .contact-link[href*="linkedin"] {
-  width: 69px;
+  width: 130px;
 }
 
 .footer-links .contact-link[href*="mailto"] {
-  width: 46px;
+  width: 120px;
 }
 
 .footer-links .contact-link:hover {
@@ -548,13 +548,13 @@ body {
 .scroll-hint span {
   font-family: "gibson", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 25px;
   letter-spacing: 0.5px;
 }
 
 .scroll-hint-arrow {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
 }
 
 @keyframes scrollHintFadeIn {
