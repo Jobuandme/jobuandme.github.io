@@ -16,7 +16,7 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="public/favicon2.png"
+      href="public/Favicon2.png"
     >
   </head>
 
@@ -28,11 +28,15 @@
            ========================= -->
 
       <section class="home" id="home">
-        <img
-          class="home-image"
-          src="public/Main Title.png"
-          alt="Michael Gvozdek portfolio graphic"
-        >
+        <picture>
+          <source media="(max-width: 700px)" srcset="public/Mobile Title.png">
+          <img
+            class="home-image"
+            src="public/Main Title.png"
+            alt="Michael Gvozdek portfolio graphic"
+          >
+        </picture>
+
         <div class="scroll-hint">
           <span>Scroll to navigate</span>
 
@@ -50,6 +54,10 @@
               stroke-linejoin="round"
             />
           </svg>
+        </div>
+
+        <div class="mobile-hint">
+          <span>View on desktop for the best experience</span>
         </div>
       </section>
 

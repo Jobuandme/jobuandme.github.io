@@ -132,7 +132,7 @@
   color: var(--black);
 
   font-family: "gibson", sans-serif;
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(12px, 2.2vw, 24px);
   font-weight: 300;
   line-height: 1.5;
 }
@@ -180,6 +180,16 @@
 }
 
 .project-image-grid .project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.project-image-grid .project-video {
   display: block;
 
   width: 100%;
