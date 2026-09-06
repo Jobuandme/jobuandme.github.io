@@ -603,3 +603,32 @@ body {
 
 
 
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .footer-logo {
+    width: 60vw;
+  }
+
+  .footer-bar {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .footer-links {
+    gap: 6vw;
+  }
+
+  .footer-links .contact-link {
+    font-size: 14px;
+  }
+
+  .footer-links .contact-link[href*="instagram"],
+  .footer-links .contact-link[href*="linkedin"],
+  .footer-links .contact-link[href*="mailto"] {
+    width: auto;
+  }
+}
