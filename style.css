@@ -564,6 +564,37 @@ body {
 }
 
 
+/* =========================
+   MOBILE HINT
+   ========================= */
+
+.mobile-hint {
+  display: none;
+
+  position: absolute;
+  top: 40px;
+  left: 50%;
+
+  max-width: 80vw;
+
+  color: var(--grey);
+  text-align: center;
+
+  opacity: 0;
+  transform: translateX(-50%);
+
+  animation: scrollHintFadeIn 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.mobile-hint span {
+  font-family: "gibson", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+
 
 
 
@@ -609,6 +640,28 @@ body {
 
 @media (max-width: 700px) {
 
+  /* ---- Home / hero ---- */
+
+  .home {
+    justify-content: flex-end;
+  }
+
+  .home-image {
+    width: min(90vw, 420px);
+    margin: 0;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .mobile-hint {
+    display: block;
+  }
+
+
+  /* ---- Footer ---- */
+
   .footer-logo {
     width: 60vw;
   }
@@ -631,4 +684,124 @@ body {
   .footer-links .contact-link[href*="mailto"] {
     width: auto;
   }
+
+/* ---- Information section ---- */
+
+.information {
+  min-height: auto;
 }
+
+.information-header {
+  padding: 32px 5.2vw 20px;
+}
+
+.information-header h1 {
+  font-size: 40px;
+}
+
+.information-row {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.information-label {
+  padding: 20px 5.2vw 6px;
+}
+
+.information-label h2 {
+  font-size: 24px;
+}
+
+.information-content {
+  padding: 6px 5.2vw 20px;
+}
+
+.information-content p {
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.skills {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.skills-column {
+  gap: 8px;
+}
+
+.skills-column span {
+  font-size: 16px;
+}
+
+.contact-item {
+  grid-template-columns: 1fr;
+
+  gap: 2px;
+
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.contact {
+  gap: 18px;
+}
+
+
+/* ---- Projects section ---- */
+
+.projects {
+  padding: 6vh 0 8vh;
+}
+
+.projects-container {
+  width: 90%;
+}
+
+.projects-header {
+  margin: 0 auto 6vh;
+  padding: 18px 20px;
+}
+
+.projects-header h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "gibson", sans-serif;
+  font-size: clamp(20px, 5vw, 120px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0px;
+}
+
+.project-card {
+  padding: 6vw;
+  margin-bottom: 6vh;
+}
+
+.project-title {
+  margin-top: 3vh;
+}
+
+.project-title h2 {
+  font-size: 30px;
+}
+
+.project-description {
+  max-width: 100%;
+  margin: 2vh 0;
+  font-size: 16px;
+}
+
+.project-categories {
+  gap: 10px;
+}
+
+.project-categories span {
+  font-size: 14px;
+}
+
+
+}
+
