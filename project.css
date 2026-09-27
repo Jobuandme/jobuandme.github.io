@@ -27,7 +27,7 @@
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 500;
 
@@ -83,9 +83,9 @@
 
   color: var(--grey);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
@@ -98,7 +98,7 @@
 
   color: var(--red);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(60px, 4vw, 80px);
   font-weight: 900;
   line-height: 1;
@@ -113,7 +113,7 @@
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(20px, 2.2vw, 38px);
   font-weight: 700;
   line-height: 1.15;
@@ -131,9 +131,9 @@
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(12px, 2.2vw, 24px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -155,7 +155,7 @@
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(18px, 2.2vw, 28px);
   font-weight: 400;
   line-height: 1.4;
@@ -211,10 +211,10 @@
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(14px, 3vw, 24px);
-  font-weight: 300;
-  line-height: 2;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .project-list li {
@@ -245,8 +245,8 @@
 }
 
 .back-to-top span {
-  font-family: "gibson", sans-serif;
-  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: 0.5px;
 }

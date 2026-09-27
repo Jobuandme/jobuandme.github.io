@@ -31,7 +31,7 @@ body {
   background-color: var(--white);
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
 }
 
@@ -105,11 +105,11 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(20px, 5vw, 120px);
   font-weight: 900;
   line-height: 0.95;
-  letter-spacing: -3px;
+  letter-spacing: clamp(-1px, 5vw, -1px);
 }
 
 
@@ -144,10 +144,11 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(28px, 3vw, 45px);
   font-weight: 700;
   line-height: 1.1;
+
 }
 
 
@@ -166,9 +167,9 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 350;
   line-height: 1.5;
 }
 
@@ -197,9 +198,9 @@ body {
 .skills-column span {
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -230,7 +231,7 @@ body {
 }
 
 .contact-item strong {
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 600;
 }
 
@@ -241,8 +242,8 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
-  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
 
   text-decoration: none;
 
@@ -263,8 +264,8 @@ body {
 
   color: var(--red);
 
-  font-family: "gibson", sans-serif;
-  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
 
   text-decoration: none;
 
@@ -329,11 +330,11 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(20px, 5vw, 120px);
   font-weight: 900;
   line-height: 0.95;
-  letter-spacing: -3px;
+  letter-spacing: clamp(-1px, 5vw, -1px);
 }
 
 
@@ -394,7 +395,7 @@ body {
 
   color: inherit;
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(36px, 3vw, 72px);
   font-weight: 700;
   line-height: 1;
@@ -418,9 +419,9 @@ body {
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(14px, 2vw, 32px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.35;
 }
 
@@ -447,9 +448,9 @@ body {
 
   color: var(--black);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(18px, 3vw, 24px);
-  font-weight: 300;
+  font-weight: 400;
 
   line-height: 1.1;
   white-space: nowrap;
@@ -504,7 +505,7 @@ body {
   text-align: center;
 
   font-size: clamp(16px, 3vw, 24px);
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .footer-links .contact-link[href*="instagram"] {
@@ -546,8 +547,8 @@ body {
 }
 
 .scroll-hint span {
-  font-family: "gibson", sans-serif;
-  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
   font-size: 25px;
   letter-spacing: 0.5px;
 }
@@ -588,8 +589,8 @@ body {
 }
 
 .mobile-hint span {
-  font-family: "gibson", sans-serif;
-  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.3px;
 }
@@ -722,8 +723,8 @@ body {
 }
 
 .skills {
-  grid-template-columns: 1fr;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .skills-column {
@@ -768,7 +769,7 @@ body {
 
   color: var(--white);
 
-  font-family: "gibson", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(20px, 5vw, 120px);
   font-weight: 900;
   line-height: 0.95;
@@ -805,4 +806,3 @@ body {
 
 
 }
-
